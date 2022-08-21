@@ -1,0 +1,61 @@
+@define-color clear rgba(0, 0, 0, 0.0);
+@define-color primary rgba(0, 0, 0, 0.75);
+
+window {
+    margin: 2px;
+    border: 0px solid;
+    background-color: #1e1e2e;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+#input {
+    padding: 2px;
+    margin: 4px;
+    margin-bottom: 8px;
+    border: none;
+    color: @foreground;
+    background-color: #313244;
+   	outline: none;
+}
+
+#inner-box {
+    margin: 2px;
+    border: 0px solid;
+    background-color: @clear;
+    border-radius: 8px;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: @clear;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text:selected {
+    color: @foreground;
+    margin: 0px 0px;
+    border: none;
+    border-radius: 8px;
+}
+
+#entry {
+    margin: 0px 0px;
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    margin: 0px 0px;
+    border: none;
+    border-radius: 8px;
+    background-color: #585b70;
+}

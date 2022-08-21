@@ -1,0 +1,48 @@
+window {
+    font-family: monospace;
+    font-size: 14pt;
+    color: #cdd6f4;  /* text */
+    background-color: #11111b;
+}
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    border: none;
+    background-color: #11111b;
+}
+
+button:hover {
+    background-color: #313244;
+}
+
+button:focus {
+    background-color: #cba6f7;
+    color: #1e1e2e;
+}
+
+button:active {
+    background-color: #6c7086;
+    color: #1e1e2e;
+}
+
+#lock {
+    background-image: image(url("./lock.png"));
+}
+
+#logout {
+    background-image: image(url("./exit-to-app.png"));
+}
+
+#suspend {
+    background-image: image(url("./power-sleep.png"));
+}
+
+#shutdown {
+    background-image: image(url("./power.png"));
+}
+
+#reboot {
+    background-image: image(url("./restart.png"));
+}

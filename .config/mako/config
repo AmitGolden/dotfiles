@@ -1,0 +1,21 @@
+sort=-time
+layer=overlay
+width=350
+border-size=2
+border-radius=10
+icons=1
+max-icon-size=24
+max-visible=3
+icon-path=/usr/share/icons/Papirus-Dark
+default-timeout=2000
+ignore-timeout=0
+font=monospace 11
+
+
+background-color=#1E1D2F
+text-color=#D9E0EE
+border-color=#96CDFB
+progress-color=over #302D41
+
+[urgency=high]
+border-color=#F8BD96
