@@ -25,6 +25,7 @@ alias vim='nvim'
 alias sudo='sudo '
 alias checkupdates='checkupdates && paru -Qua'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias lzconf='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias j="z"
 alias ji="zi"
 alias ..='cd ..'
@@ -106,14 +107,18 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 KEYTIMEOUT=5
 
-
 # Environment variables
 source ~/.profile
 export SHELL=zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+if [ "$TERM" = "linux" ]; then
+  [[ ! -f ~/.p10k-tty.zsh ]] || source ~/.p10k-tty.zsh
+else
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+fi
 
+source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
+source ~/.config/zsh/catppuccin-tty.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -121,5 +126,3 @@ zvm_after_init_commands+=('source /usr/share/fzf/completion.zsh && source /usr/s
 eval "$(zoxide init zsh)"
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh 2>/dev/null
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
-autopair-init

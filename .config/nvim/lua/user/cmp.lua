@@ -103,6 +103,7 @@ cmp.setup({
 				buffer = "",
 				path = "",
 				emoji = "",
+				cmp_tabnine = "",
 			})[entry.source.name]
 			return vim_item
 		end,
@@ -113,6 +114,7 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
+		{ name = "cmp_tabnine" },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
@@ -122,7 +124,16 @@ cmp.setup({
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
+	enabled = function()
+		return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" or require("cmp_dap").is_dap_buffer()
+	end,
 	experimental = {
 		ghost_text = true,
+	},
+})
+
+cmp.setup.filetype({ "dap-repl", "dapui_watches" }, {
+	sources = {
+		{ name = "dap" },
 	},
 })

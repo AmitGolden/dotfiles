@@ -1,16 +1,15 @@
 export EDITOR=nvim
 export VISUAL=nvim
 export QT_QPA_PLATFORMTHEME=qt5ct 
-export BAT_THEME=base16
+export BAT_THEME="Catppuccin-mocha"
 export GDK_CORE_DEVICE_EVENTS=1
 
 export PATH=/home/amitgold/.local/bin:$PATH
 
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-	--color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229
-	--color info:150,prompt:110,spinner:150,pointer:167,marker:174
-	--preview "less ${(Q)realpath} {}"
-	--reverse'
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:-1,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#a6e3a1,prompt:#cba6f7,hl+:#f38ba8"
 
 # Colorful man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'

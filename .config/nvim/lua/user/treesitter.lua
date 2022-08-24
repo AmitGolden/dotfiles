@@ -8,10 +8,43 @@ configs.setup({
 	ignore_install = { "" }, -- List of parsers to ignore installing
 	highlight = {
 		enable = true, -- false will disable the whole extension
-		disable = { "css" }, -- list of language that will be disabled
+		disable = {}, -- list of language that will be disabled
 	},
 	autopairs = {
 		enable = true,
 	},
+	context_commentstring = {
+		enable = true,
+		enable_autocmd = false,
+	},
 	indent = { enable = true, disable = { "python", "css" } },
+	matchup = {
+		enable = true,
+	},
+	textobjects = {
+		select = {
+			enable = true,
+			-- automatically jump forward to textobj, similar to targets.vim
+			lookahead = true,
+
+			keymaps = {
+				-- you can use the capture groups defined in textobjects.scm
+				["af"] = "@call.outer",
+				["if"] = "@call.inner",
+				["ab"] = "@block.outer",
+				["ib"] = "@block.inner",
+			},
+		},
+	},
+	-- textsubjects = {
+	-- 	enable = true,
+	-- 	prev_selection = ",", -- (Optional) keymap to select the previous selection
+	-- 	keymaps = {
+	-- 		["."] = "textsubjects-smart",
+	-- 		[";"] = "textsubjects-container-outer",
+	-- 		["i;"] = "textsubjects-container-inner",
+	-- 	},
+	-- },
 })
+
+vim.g.matchup_matchparen_offscreen = { method = "popup" }
