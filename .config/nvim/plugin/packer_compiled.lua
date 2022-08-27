@@ -184,6 +184,16 @@ _G.packer_plugins = {
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   neotest = {
     loaded = true,
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/neotest",
@@ -243,11 +253,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/nvim-dap-vscode-js",
     url = "https://github.com/mxsdev/nvim-dap-vscode-js"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

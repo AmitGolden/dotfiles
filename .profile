@@ -5,6 +5,7 @@ export BAT_THEME="Catppuccin-mocha"
 export GDK_CORE_DEVICE_EVENTS=1
 
 export PATH=/home/amitgold/.local/bin:$PATH
+source $HOME/.ghcup/env
 
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:-1,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
