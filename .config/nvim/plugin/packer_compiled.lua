@@ -344,6 +344,11 @@ _G.packer_plugins = {
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/smart-splits.nvim",
     url = "https://github.com/mrjones2014/smart-splits.nvim"
   },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/telescope.nvim",
