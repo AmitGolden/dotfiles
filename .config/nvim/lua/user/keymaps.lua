@@ -8,6 +8,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
 vim.g.camelcasemotion_key = "-"
+vim.cmd [[ let g:sneak#label = 1 ]]
 
 -- Modes
 --   normal_mode = "n",
@@ -23,9 +24,6 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-
-keymap("n", "s", "<Plug>Sneak_s", opts)
-keymap("n", "S", "<Plug>Sneak_S", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", "<cmd> lua require('smart-splits').resize_up(2)<CR>", opts)
@@ -51,8 +49,8 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Insert new line without insert mode
-keymap("n", "go", "o<ESC>k", opts)
-keymap("n", "gO", "O<ESC>j", opts)
+keymap("n", "go", "o<ESC>", opts)
+keymap("n", "gO", "O<ESC>", opts)
 
 -- Insert --
 -- Press jk fast to enter

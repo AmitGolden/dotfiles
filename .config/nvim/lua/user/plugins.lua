@@ -56,6 +56,7 @@ return packer.startup(function(use)
 	use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "akinsho/bufferline.nvim" })
 	use("folke/which-key.nvim")
+	-- use({ "stevearc/dressing.nvim" })
 	use({ "norcalli/nvim-colorizer.lua" })
 	use({ "akinsho/toggleterm.nvim" })
 	use("windwp/nvim-spectre")
@@ -66,6 +67,7 @@ return packer.startup(function(use)
 		requires = "kyazdani42/nvim-web-devicons",
 	})
 	use("mrjones2014/smart-splits.nvim")
+	use("p00f/nvim-ts-rainbow")
 
 	-- Movement
 	-- use("ggandor/leap.nvim")
@@ -100,6 +102,7 @@ return packer.startup(function(use)
 		requires = "hrsh7th/nvim-cmp",
 	})
 	use("rcarriga/cmp-dap")
+	use("hrsh7th/cmp-cmdline")
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine

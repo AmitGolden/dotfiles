@@ -12,7 +12,7 @@
 NotificationID_File=/tmp/volume_notification_id
 
 function get_volume {
-  amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
+  pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | cut -f 2 -d '/' | cut -d '%' -f 1 | xargs
 }
 
 function is_mute {
@@ -49,13 +49,13 @@ case $1 in
     # set the volume on (if it was muted)
     amixer -D pipewire set Master on > /dev/null
     # up the volume (+ 5%)
-    amixer -D pipewire sset Master 5%+ > /dev/null
+    pactl set-sink-volume @DEFAULT_SINK@ +5% > /dev/null
     send_notification
     canberra-gtk-play -i audio-volume-change -d "changeVolume"
     ;;
   down)
     amixer -D pipewire set Master on > /dev/null
-    amixer -D pipewire sset Master 5%- > /dev/null
+    pactl set-sink-volume @DEFAULT_SINK@ -5% > /dev/null
     send_notification
     canberra-gtk-play -i audio-volume-change -d "changeVolume"
     ;;

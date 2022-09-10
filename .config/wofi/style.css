@@ -3,9 +3,10 @@
 
 window {
     margin: 2px;
-    border: 0px solid;
+    border: 2px solid;
+    border-color: #313244;
     background-color: #1e1e2e;
-    border-radius: 8px;
+    border-radius: 10px;
     font-family: monospace;
     font-size: 14px;
 }

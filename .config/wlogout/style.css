@@ -2,7 +2,7 @@ window {
     font-family: monospace;
     font-size: 14pt;
     color: #cdd6f4;  /* text */
-    background-color: #11111b;
+    background-color: rgba(30, 30, 46, 0.3);
 }
 
 button {
@@ -10,11 +10,13 @@ button {
     background-position: center;
     background-size: 25%;
     border: none;
-    background-color: #11111b;
+    background-color: rgba(30, 30, 46, 0);
+    margin: 5px;
+    transition: box-shadow .20s ease-in-out, background-color .20s ease-in-out;
 }
 
 button:hover {
-    background-color: #313244;
+    /*background-color: #313244; */
 }
 
 button:focus {

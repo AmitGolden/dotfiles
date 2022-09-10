@@ -12,8 +12,9 @@ theme.setup({
 			enabled = true,
 			enable_ui = true,
 		},
-		-- leap = true,
 		vim_sneak = true,
+		ts_rainbow = true,
+		which_key = true,
 	},
 })
 

@@ -128,6 +128,7 @@ local mappings = {
 			"Diff",
 		},
 		h = { "<cmd>DiffviewFileHistory<cr>", "File History" },
+		C = { "<cmd>DiffviewClose<cr>", "Close diffview" },
 	},
 
 	l = {
