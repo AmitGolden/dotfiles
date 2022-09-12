@@ -8,7 +8,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
 vim.g.camelcasemotion_key = "-"
-vim.cmd [[ let g:sneak#label = 1 ]]
+vim.cmd([[ let g:sneak#label = 1 ]])
 
 -- Modes
 --   normal_mode = "n",
@@ -52,6 +52,9 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "go", "o<ESC>", opts)
 keymap("n", "gO", "O<ESC>", opts)
 
+-- Remap marks
+keymap("n", "gm", "m", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
@@ -59,8 +62,9 @@ keymap("i", "jk", "<ESC>", opts)
 -- Paste
 keymap("i", "<C-v>", "<ESC>pi", opts)
 
--- Remap marks
-keymap("n", "gm", "m", opts)
+-- Delete word
+keymap("i", "<C-BS>", "<C-w>", opts)
+keymap("t", "<C-BS>", "<C-w>", opts)
 
 -- Visual --
 -- Stay in indent mode

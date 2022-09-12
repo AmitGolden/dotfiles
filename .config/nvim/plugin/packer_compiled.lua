@@ -169,11 +169,6 @@ _G.packer_plugins = {
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["guess-indent.nvim"] = {
-    loaded = true,
-    path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/guess-indent.nvim",
-    url = "https://github.com/nmac427/guess-indent.nvim"
-  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -183,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["indent-o-matic"] = {
+    loaded = true,
+    path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/indent-o-matic",
+    url = "https://github.com/Darazaki/indent-o-matic"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -293,6 +293,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["nvim-treesitter-textobjects"] = {
     loaded = true,

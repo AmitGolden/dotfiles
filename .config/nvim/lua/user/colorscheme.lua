@@ -19,3 +19,9 @@ theme.setup({
 })
 
 vim.cmd([[colorscheme catppuccin]])
+
+vim.cmd [[
+hi def IlluminatedWordText guibg=#45475A
+hi def IlluminatedWordWrite guibg=#45475A
+hi def IlluminatedWordRead guibg=#45475A
+]]

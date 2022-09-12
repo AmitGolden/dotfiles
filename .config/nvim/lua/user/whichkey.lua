@@ -96,6 +96,7 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+	["r"] = { "<cmd>Telescope oldfiles<CR>", "Recent Files" },
 
 	p = {
 		name = "Packer",
@@ -187,7 +188,7 @@ local mappings = {
 		u = { "<cmd>lua require'dapui'.toggle()<CR>", "Toggle UI" },
 	},
 
-	t = {
+	T = {
 		name = "Testing",
 		t = { "<cmd>lua require('neotest').run.run()<cr>", "Test Nearest" },
 		f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Test Entire File" },
@@ -198,7 +199,7 @@ local mappings = {
 		o = { "<cmd>lua require('neotest').output.open({ enter = true })<cr>", "Open Test Output" },
 	},
 
-	T = {
+	t = {
 		name = "Terminal",
 		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },

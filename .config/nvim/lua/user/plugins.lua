@@ -80,7 +80,7 @@ return packer.startup(function(use)
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
 	})
-	use({ "nmac427/guess-indent.nvim" })
+	use({ "Darazaki/indent-o-matic" })
 	use("gbprod/cutlass.nvim")
 	use({ "numToStr/Comment.nvim" })
 	use("windwp/nvim-ts-autotag")
@@ -139,12 +139,13 @@ return packer.startup(function(use)
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
-	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 	})
+	use("nvim-treesitter/nvim-treesitter-context")
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
