@@ -2,7 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" > /dev/null
 fi
 
 # Basic auto/tab complete:
@@ -122,7 +122,7 @@ source ~/.config/zsh/catppuccin-tty.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-zvm_after_init_commands+=('source /usr/share/fzf/completion.zsh && source /usr/share/fzf/key-bindings.zsh')
+zvm_after_init_commands+=('source /usr/share/fzf/completion.zsh && source /usr/share/fzf/key-bindings.zsh && autopair-init')
 eval "$(zoxide init zsh)"
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh 2>/dev/null
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
