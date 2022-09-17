@@ -9,9 +9,10 @@
   <property name="last-show-hidden" type="bool" value="false"/>
   <property name="misc-open-new-window-as-tab" type="bool" value="false"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="126,124,72,114,1111,76,112,79,112,151"/>
+  <property name="last-details-view-column-widths" type="string" value="126,124,72,114,1209,76,112,70,112,62"/>
   <property name="last-sort-column" type="string" value="THUNAR_COLUMN_DATE_MODIFIED"/>
-  <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
+  <property name="last-sort-order" type="string" value="GTK_SORT_DESCENDING"/>
   <property name="misc-middle-click-in-tab" type="bool" value="true"/>
   <property name="last-details-view-visible-columns" type="string" value="THUNAR_COLUMN_DATE_ACCESSED,THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_NAME,THUNAR_COLUMN_PERMISSIONS,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_TYPE"/>
+  <property name="misc-confirm-close-multiple-tabs" type="bool" value="false"/>
 </channel>
