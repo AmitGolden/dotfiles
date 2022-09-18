@@ -30,7 +30,7 @@ local filetype = {
 
 local location = {
 	"location",
-	padding = 0,
+	padding = { right = 1, left = 0 },
 }
 
 local branch = { "branch", icon = "" }
@@ -72,7 +72,7 @@ lualine.setup({
 		lualine_b = { branch },
 		lualine_c = { diagnostics },
 		lualine_x = { lsp, diff, "encoding", spaces, filetype },
-		lualine_y = { location },
-		lualine_z = { "progress" },
+		lualine_y = { "progress" },
+		lualine_z = { location },
 	},
 })

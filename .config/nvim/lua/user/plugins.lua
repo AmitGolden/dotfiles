@@ -103,6 +103,7 @@ return packer.startup(function(use)
 	})
 	use("rcarriga/cmp-dap")
 	use("hrsh7th/cmp-cmdline")
+	use("hrsh7th/cmp-nvim-lsp-signature-help")
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
@@ -114,7 +115,6 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate" })
-	use("ray-x/lsp_signature.nvim")
 
 	-- Testing
 	use({
