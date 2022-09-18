@@ -188,7 +188,7 @@ local mappings = {
 		u = { "<cmd>lua require'dapui'.toggle()<CR>", "Toggle UI" },
 	},
 
-	T = {
+	t = {
 		name = "Testing",
 		t = { "<cmd>lua require('neotest').run.run()<cr>", "Test Nearest" },
 		f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Test Entire File" },
@@ -199,12 +199,12 @@ local mappings = {
 		o = { "<cmd>lua require('neotest').output.open({ enter = true })<cr>", "Open Test Output" },
 	},
 
-	t = {
+	T = {
 		name = "Terminal",
 		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-		["<CR>"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Terminal" },
+		t = { "<cmd>ToggleTerm direction=tab<cr>", "Vertical" },
 	},
 }
 
