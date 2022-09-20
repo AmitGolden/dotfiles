@@ -164,7 +164,7 @@ local mappings = {
 		},
 	},
 
-	s = {
+	S = {
 		name = "Search",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
@@ -173,7 +173,7 @@ local mappings = {
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
-		s = { "<cmd>lua require('spectre').open()<cr>", "Search and replace" },
+		S = { "<cmd>lua require('spectre').open()<cr>", "Search and replace" },
 	},
 
 	d = {

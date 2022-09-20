@@ -82,6 +82,7 @@ return packer.startup(function(use)
 	})
 	use({ "Darazaki/indent-o-matic" })
 	use("gbprod/cutlass.nvim")
+	use("gbprod/substitute.nvim")
 	use({ "numToStr/Comment.nvim" })
 	use("windwp/nvim-ts-autotag")
 	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
@@ -115,6 +116,7 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate" })
+	use("b0o/schemastore.nvim")
 
 	-- Testing
 	use({

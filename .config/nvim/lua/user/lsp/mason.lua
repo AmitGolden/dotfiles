@@ -44,6 +44,9 @@ for _, server in pairs(servers) do
 	elseif server == "hls" then
 		local hls_opts = require("user.lsp.settings.hls")
 		opts = vim.tbl_deep_extend("force", hls_opts, opts)
+	elseif server == "jsonls" then
+		local jsonls_opts = require("user.lsp.settings.jsonls")
+		opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
 	end
 
 	lspconfig[server].setup(opts)
