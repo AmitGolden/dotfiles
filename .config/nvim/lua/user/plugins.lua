@@ -50,6 +50,8 @@ return packer.startup(function(use)
 	use({ "ahmedkhalf/project.nvim" })
 	use({ "lewis6991/impatient.nvim" })
 
+	use("ThePrimeagen/vim-be-good")
+
 	-- UI
 	use({ "goolord/alpha-nvim" })
 	use({ "nvim-lualine/lualine.nvim" })

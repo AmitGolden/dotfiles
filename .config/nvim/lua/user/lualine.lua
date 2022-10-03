@@ -3,6 +3,11 @@ if not status_ok then
 	return
 end
 
+local null_ls_status_ok, null_ls = pcall(require, "null-ls")
+if not null_ls_status_ok then
+	return
+end
+
 local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
 end
@@ -37,19 +42,40 @@ local branch = { "branch", icon = "" }
 
 local lsp = {
 	function()
-		local msg = "no lsp"
-		local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-		local clients = vim.lsp.get_active_clients()
-		if next(clients) == nil then
-			return msg
+		local buf_clients = vim.lsp.buf_get_clients()
+		if next(buf_clients) == nil then
+			return "no lsp"
 		end
-		for _, client in ipairs(clients) do
-			local filetypes = client.config.filetypes
-			if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-				return client.name
+		local buf_ft = vim.bo.filetype
+		local buf_client_names = {}
+
+		-- add client
+		for _, client in pairs(buf_clients) do
+			if client.name ~= "null-ls" then
+				table.insert(buf_client_names, client.name)
 			end
 		end
-		return msg
+
+		local s = require("null-ls.sources")
+		local available_sources = s.get_available(buf_ft)
+		local providers = {}
+		for _, source in ipairs(available_sources) do
+			for method in pairs(source.methods) do
+				providers[method] = providers[method] or {}
+				table.insert(providers[method], source.name)
+			end
+		end
+
+		-- add formatter
+		local supported_formatters = providers[null_ls.methods.FORMATTING] or {}
+		vim.list_extend(buf_client_names, supported_formatters)
+
+		-- add linter
+		local supported_linters = providers[null_ls.methods.DIAGNOSTICS] or {}
+		vim.list_extend(buf_client_names, supported_linters)
+
+		local unique_client_names = vim.fn.uniq(buf_client_names)
+		return table.concat(unique_client_names, ", ")
 	end,
 }
 

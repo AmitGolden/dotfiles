@@ -2,7 +2,7 @@ window {
     font-family: monospace;
     font-size: 14pt;
     color: #cdd6f4;  /* text */
-    background-color: rgba(30, 30, 46, 0.3);
+    background-color: rgba(30, 30, 46, 0.5);
 }
 
 button {

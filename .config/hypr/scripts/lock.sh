@@ -20,7 +20,7 @@ swaylock \
   --inside-ver-color 89b4fa\
   --inside-wrong-color f38ba8 \
   --inside-clear-color a6e3a1 \
-	--color 00000000 \
+	--color 1e1e2e80 \
 	--clock \
 	--indicator \
 	# --grace 2 \
