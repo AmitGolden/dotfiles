@@ -63,6 +63,7 @@ tooltip {
     padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 10px;
+    border: 1px solid #181825;
 }
 
 #tray {
@@ -82,14 +83,19 @@ tooltip {
     color: #89dceb;
     border-radius: 10px 0px 0px 10px;
     padding-right: 12px;
+    border-right: 0px;
 }
 
 #custom-language {
     color: #f38ba8;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 #custom-updates {
     color: #f5c2e7;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 #window {
@@ -104,18 +110,25 @@ tooltip {
 
 #network {
     color: #fab387;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 #pulseaudio {
     color: #89b4fa;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 #battery {
     color: #a6e3a1;
     border-radius: 0 10px 10px 0;
     margin-right: 10px;
+    border-left: 0px;
 }
 
 #backlight {
     color: #cba6f7;
+    border-left: 0px;
+    border-right: 0px;
 }
