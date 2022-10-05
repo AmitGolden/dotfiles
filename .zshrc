@@ -31,6 +31,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias icat="kitty +kitten icat"
+alias du="du -h"
 
 function confup {
 	config commit -m "update" && config push
