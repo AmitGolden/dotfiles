@@ -1,7 +1,7 @@
 window {
     font-family: monospace;
     font-size: 14pt;
-    color: #cdd6f4;  /* text */
+    color: #cdd6f4; /* text */
     background-color: rgba(30, 30, 46, 0.5);
 }
 
@@ -12,11 +12,11 @@ button {
     border: none;
     background-color: rgba(30, 30, 46, 0);
     margin: 5px;
-    transition: box-shadow .20s ease-in-out, background-color .20s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 button:hover {
-    /*background-color: #313244; */
+    background-color: rgba(49, 50, 68, 0.1);
 }
 
 button:focus {
@@ -24,27 +24,37 @@ button:focus {
     color: #1e1e2e;
 }
 
-button:active {
-    background-color: #6c7086;
-    color: #1e1e2e;
-}
-
 #lock {
     background-image: image(url("./lock.png"));
 }
+#lock:focus {
+    background-image: image(url("./lock-hover.png"));
+}
 
 #logout {
-    background-image: image(url("./exit-to-app.png"));
+    background-image: image(url("./logout.png"));
+}
+#logout:focus {
+    background-image: image(url("./logout-hover.png"));
 }
 
 #suspend {
-    background-image: image(url("./power-sleep.png"));
+    background-image: image(url("./sleep.png"));
+}
+#suspend:focus {
+    background-image: image(url("./sleep-hover.png"));
 }
 
 #shutdown {
     background-image: image(url("./power.png"));
 }
+#shutdown:focus {
+    background-image: image(url("./power-hover.png"));
+}
 
 #reboot {
     background-image: image(url("./restart.png"));
+}
+#reboot:focus {
+    background-image: image(url("./restart-hover.png"));
 }
