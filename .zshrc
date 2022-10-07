@@ -52,6 +52,12 @@ function gitrelease {
 	git push && git checkout $MASTER && git merge develop && git push && git checkout develop
 }
 
+function lf {
+  command lf
+  cd $(cat /tmp/lf.lastd)
+  rm /tmp/lf.lastd
+}
+
 #
 # # ex - archive extractor
 # # usage: ex <file>

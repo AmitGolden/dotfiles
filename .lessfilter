@@ -3,10 +3,11 @@
 mime=$(file -bL --mime-type "$1")
 category=${mime%%/*}
 kind=${mime##*/}
+
 if [ -d "$1" ]; then
 	exa --git -hl --color=always --icons "$1"
 # elif [ "$category" = image ]; then
-#   kitty +kitten icat --align right --transfer-mode file "$1"
+  # kitty +kitten icat --place 30x30@0x0 --silent --transfer-mode file "$1"
 # elif [ "$kind" = vnd.openxmlformats-officedocument.spreadsheetml.sheet ] || \
 # 	[ "$kind" = vnd.ms-excel ]; then
 # 	in2csv "$1" | xsv table | bat -ltsv --color=always

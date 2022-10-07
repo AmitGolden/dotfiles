@@ -1,0 +1,58 @@
+cmd j %{{
+    result="$(zoxide query --exclude "${PWD}" -- "$@")"
+    lf -remote "send ${id} cd '${result}'"
+}}
+
+cmd ji ${{
+    result="$(zoxide query -i -- "$@")"
+    lf -remote "send ${id} cd '${result}'"
+}}
+
+cmd fzf_jump ${{
+    res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    if [ -d "$res" ] ; then
+        cmd="cd"
+    elif [ -f "$res" ] ; then
+        cmd="select"
+    else
+        exit 0
+    fi
+    lf -remote "send $id $cmd \"$res\""
+}}
+map <c-f> :fzf_jump
+
+cmd fzf_search ${{
+    res="$( \
+        RG_PREFIX="rg --column --line-number --no-heading --color=always \
+            --smart-case "
+        FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
+            fzf --bind "change:reload:$RG_PREFIX {q} || true" \
+            --ansi --layout=reverse --header 'Search in files' \
+            | cut -d':' -f1
+    )"
+    [ ! -z "$res" ] && lf -remote "send $id select \"$res\""
+}}
+
+cmd on-cd &{{
+    # '&' commands run silently in background (which is what we want here),
+    # but are not connected to stdout.
+    # To make sure our escape sequence still reaches stdout we pipe it to /dev/tty
+    printf "\033]0; $(pwd | sed "s|$HOME|~|") - lf\007" > /dev/tty
+}}
+
+# also run at startup
+on-cd
+
+cmd on-quit ${{
+    pwd > /tmp/lf.lastd
+}}
+
+map gs :fzf_search
+
+set icons
+
+map C clear
+map c cut
+map d delete
+map D trash
+
