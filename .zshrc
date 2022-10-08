@@ -34,7 +34,7 @@ alias icat="kitty +kitten icat"
 alias du="du -h"
 
 function confup {
-	config commit -m "update" && config push
+  config commit -m "update" && config push
 }
 
 function aliasexp {
@@ -48,14 +48,22 @@ function aliasexp {
 }
 
 function gitrelease {
-	MASTER=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+  MASTER=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
 	git push && git checkout $MASTER && git merge develop && git push && git checkout develop
 }
 
 function lf {
-  command lf
-  cd $(cat /tmp/lf.lastd)
-  rm /tmp/lf.lastd
+  tmp="$(mktemp)"
+  command lf -last-dir-path="$tmp" "$@"
+  if [ -f "$tmp" ]; then
+      dir="$(cat "$tmp")"
+      rm -f "$tmp"
+      if [ -d "$dir" ]; then
+          if [ "$dir" != "$(pwd)" ]; then
+              cd "$dir"
+          fi
+      fi
+  fi
 }
 
 #
@@ -84,11 +92,7 @@ ex ()
   fi
 }
 
-# Window title
-precmd () {print -Pn "\033]0;${PWD}\007"}
-
 # Settings
-
 bindkey -v
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word

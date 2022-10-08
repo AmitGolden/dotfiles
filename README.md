@@ -5,6 +5,7 @@
 
 -   **Catppuccin Mocha**
 -   **Hyprland**
+-   **Papirus Icons**
 -   **Waybar**
 -   **Firefox**
 -   **Kitty**
