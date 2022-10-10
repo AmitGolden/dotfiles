@@ -8,18 +8,9 @@
 # https://github.com/dastorm/volume-notification-dunst/blob/master/volume.sh
 # https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a
 
-NotificationID_File=/tmp/brightness_notification_id
 
 function get_brightness {
 	brightnessctl -m | awk -F, '{print substr($4, 0, length($4)-1)}'
-}
-
-function get_notification_id {
-  if [ -s "$NotificationID_File" ]; then
-    cat $NotificationID_File
-  else
-    echo 0
-  fi
 }
 
 function send_notification {
@@ -29,9 +20,8 @@ function send_notification {
   # https://en.wikipedia.org/wiki/Box-drawing_character
   bar=$(seq -s "─" 0 $(((brightness - 1) / 4)) | sed 's/[0-9]//g')
   space=$(seq --separator=" " 0 "$(((100 - brightness) / 4))" | sed 's/[0-9]//g')
-  nid=$(get_notification_id)
   # Send the notification
-  notify-send -i "$icon" -p -r $nid -u normal "|$bar$space| $brightness%" > $NotificationID_File
+  dunstify -i "$icon" -r 5555 -u normal "|$bar$space| $brightness%"
 }
 
 

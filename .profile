@@ -1,5 +1,5 @@
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=nvim_kitty
+export VISUAL=nvim_kitty
 export QT_QPA_PLATFORMTHEME=qt5ct 
 export BAT_THEME="Catppuccin-mocha"
 export GDK_CORE_DEVICE_EVENTS=1
