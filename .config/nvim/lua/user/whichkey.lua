@@ -98,7 +98,7 @@ local mappings = {
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	["r"] = { "<cmd>Telescope oldfiles<CR>", "Recent Files" },
 
-	p = {
+	i = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
 		i = { "<cmd>PackerInstall<cr>", "Install" },
@@ -143,7 +143,7 @@ local mappings = {
 			"<cmd>Telescope diagnostics<cr>",
 			"Workspace Diagnostics",
 		},
-		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>Mason<cr>", "Installer Info" },
 		j = {
@@ -164,7 +164,7 @@ local mappings = {
 		},
 	},
 
-	S = {
+	s = {
 		name = "Search",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
@@ -173,7 +173,7 @@ local mappings = {
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
-		S = { "<cmd>lua require('spectre').open()<cr>", "Search and replace" },
+		s = { "<cmd>lua require('spectre').open()<cr>", "Search and replace" },
 	},
 
 	d = {

@@ -62,8 +62,15 @@ keymap("i", "jk", "<ESC>", opts)
 -- Paste
 keymap("i", "<C-v>", "<ESC>pi", opts)
 
+-- Move in insert mode
+keymap("i", "<A-h>", "<Left>", opts)
+keymap("i", "<A-j>", "<Down>", opts)
+keymap("i", "<A-k>", "<Up>", opts)
+keymap("i", "<A-l>", "<Right>", opts)
+
 -- Delete word
 keymap("i", "<C-BS>", "<C-w>", opts)
+
 keymap("t", "<C-BS>", "<C-w>", opts)
 
 -- Visual --

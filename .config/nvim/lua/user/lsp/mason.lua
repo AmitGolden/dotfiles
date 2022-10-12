@@ -12,6 +12,7 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"hls",
+	"rust_analyzer",
 }
 
 local mason_lspconfig_status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")

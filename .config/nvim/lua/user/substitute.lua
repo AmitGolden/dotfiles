@@ -5,6 +5,6 @@ end
 
 substitute.setup()
 
-vim.keymap.set("n", "<leader>s", "<cmd>lua require('substitute').operator()<cr>", { noremap = true })
-vim.keymap.set("n", "<leader>ss", "<cmd>lua require('substitute').line()<cr>", { noremap = true })
-vim.keymap.set("n", "<leader>S", "<cmd>lua require('substitute').eol()<cr>", { noremap = true })
+vim.keymap.set("n", "<leader>p", "<cmd>lua require('substitute').operator()<cr>", { noremap = true })
+vim.keymap.set("n", "<leader>pp", "<cmd>lua require('substitute').line()<cr>", { noremap = true })
+vim.keymap.set("n", "<leader>P", "<cmd>lua require('substitute').eol()<cr>", { noremap = true })

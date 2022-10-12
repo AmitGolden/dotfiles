@@ -13,10 +13,13 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier.with({
+		formatting.prettierd.with({
 			extra_filetypes = { "toml" },
-			extra_args = { "--tab-width", "4" },
+			env = {
+				PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/lua/user/lsp/settings/prettier.json"),
+			},
 		}),
+		formatting.rustfmt,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
 		formatting.shfmt.with({
