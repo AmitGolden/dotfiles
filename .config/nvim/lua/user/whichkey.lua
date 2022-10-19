@@ -98,7 +98,7 @@ local mappings = {
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	["r"] = { "<cmd>Telescope oldfiles<CR>", "Recent Files" },
 
-	i = {
+	p = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
 		i = { "<cmd>PackerInstall<cr>", "Install" },

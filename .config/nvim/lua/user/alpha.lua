@@ -100,7 +100,7 @@ vim.api.nvim_create_autocmd("BufUnload", {
 
 alpha.setup({
 	layout = {
-		{ type = "padding", val = 6 },
+		{ type = "padding", val = 8 },
 		{ type = "group", val = colorize_header() },
 		{ type = "padding", val = 3 },
 		dashboard.section.buttons,

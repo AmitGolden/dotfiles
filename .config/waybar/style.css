@@ -82,8 +82,8 @@ tooltip {
 #custom-caffeine {
     color: #89dceb;
     border-radius: 10px 0px 0px 10px;
-    padding-right: 12px;
     border-right: 0px;
+    padding: 0px;
 }
 
 #custom-language {
