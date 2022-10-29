@@ -189,6 +189,11 @@ _G.packer_plugins = {
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/indent-o-matic",
     url = "https://github.com/Darazaki/indent-o-matic"
   },
+  ["live-command.nvim"] = {
+    loaded = true,
+    path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/live-command.nvim",
+    url = "https://github.com/smjonas/live-command.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/amitgold/.local/share/nvim/site/pack/packer/start/lualine.nvim",

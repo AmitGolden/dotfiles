@@ -88,6 +88,7 @@ return packer.startup(function(use)
 	use({ "numToStr/Comment.nvim" })
 	use("windwp/nvim-ts-autotag")
 	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
+	use("smjonas/live-command.nvim")
 
 	-- Colorschemes
 	use({ "catppuccin/nvim", as = "catppuccin" })
