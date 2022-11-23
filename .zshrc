@@ -33,11 +33,11 @@ alias ....='cd ../../..'
 alias icat="kitty +kitten icat"
 alias du="du -h"
 
-function confup {
+confup() {
   config commit -m "update" && config push
 }
 
-function aliasexp {
+aliasexp() {
   if [[ $ZSH_VERSION ]]; then
     # shellcheck disable=2154  # aliases referenced but not assigned
     [ ${aliases[$1]+x} ] && printf '%s\n' "${aliases[$1]}" && return
@@ -47,12 +47,12 @@ function aliasexp {
   false  # Error: alias not defined
 }
 
-function gitrelease {
+gitrelease() {
   MASTER=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
 	git push && git checkout $MASTER && git merge develop && git push && git checkout develop
 }
 
-function lf {
+lf() {
   tmp="$(mktemp)"
   command lf -last-dir-path="$tmp" "$@"
   if [ -f "$tmp" ]; then
@@ -100,6 +100,7 @@ bindkey "^[[1;5D" backward-word
 ZVM_KEYTIMEOUT=0.1
 ZVM_VI_HIGHLIGHT_BACKGROUND=white
 ZVM_VI_HIGHLIGHT_FOREGROUND=black
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 zstyle ':fzf-tab:*' fzf-flags --height 40%
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
