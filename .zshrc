@@ -100,6 +100,7 @@ bindkey "^[[1;5D" backward-word
 ZVM_KEYTIMEOUT=0.1
 ZVM_VI_HIGHLIGHT_BACKGROUND=white
 ZVM_VI_HIGHLIGHT_FOREGROUND=black
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 zstyle ':fzf-tab:*' fzf-flags --height 40%
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
