@@ -83,7 +83,7 @@ tooltip {
     color: #89dceb;
     border-radius: 10px 0px 0px 10px;
     border-right: 0px;
-    padding: 0px;
+    margin-left: 10px;
 }
 
 #custom-language {
