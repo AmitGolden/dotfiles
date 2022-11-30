@@ -29,5 +29,5 @@ paru -S thunar firefox deluge-gtk kitty wdisplays discord discocss spotify spice
 ### Terminal
 
 ```
-paru -S zsh zsh-theme-powerlevel10k zoxide nvim zsh-autosuggestions fzf lf trash-cli exa ripgrep btop zsh-autopair-git zsh-vi-mode fzf-tab-git zsh-syntax-highlighting lazygit bat lesspipe fd
+paru -S zsh zsh-theme-powerlevel10k zoxide neovim zsh-autosuggestions fzf lf trash-cli exa ripgrep btop zsh-autopair-git zsh-vi-mode fzf-tab-git zsh-syntax-highlighting lazygit bat lesspipe fd nodejs-neovim python-neovim
 ```
